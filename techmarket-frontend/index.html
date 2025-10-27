@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css"> -->
+    <link rel="stylesheet" href="node_modules/bulma/css/bulma.min.css">
+    <script src="src/index.js" defer></script>
+    <script src="src/burger.js" defer></script>
+    <link rel="stylesheet" href="custom/style.css">
+    <title>loja techmarket</title>
+</head>
+<body>
+
+    <!-- Barra de navegação     -->
+    <nav class="navbar is-primary">
+        <div class="navbar-brand">
+            <div class="navbar-item">
+                <img src="assets/bitmap.png" alt="site logo" style="max-height: 70px;">
+            </div>
+
+               <a href="" class="navbar-item">
+                 <img src="assets/carrinho-de-compras.png" alt="carrinho">
+               </a>
+
+               <a href="" class="navbar-item">
+                  <img src="assets/login-de-usuario.png" alt="">
+               </a>
+
+        <a href=""  id="hamburguer" class="navbar-burger">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </a>
+
+        </div>
+
+        <div class="navbar-menu" id="menu">
+           <div class="navbar-start">
+              <a href="" class="navbar-item has-text-black">Categorias</a>
+              <a href="" class="navbar-item has-text-black">Contato</a>
+              <a href="" class="navbar-item has-text-black">Cursos</a>
+           </div>
+
+        </div>
+    </nav>
+
+    <!-- breadcrumbs -->
+   <div class="section pt-4 pb-0">
+    <h1 class="is-size-6 mb-3 has-text-black">Componentes da seção</h1>
+
+        <nav class="breadcrumb is-size-7-mobile">
+            <ul>
+                <li><a class=" bc">TTL</a></li>
+                <li><a class=" bc">CMOS</a></li>
+                <li><a class=" bc">MicroControladores</a></li>
+                <li><a class=" bc">Memórias</a></li>
+                <li><a class=" bc">IoT</a></li>
+            </ul>
+        </nav>
+    </div>
+    
+     <!-- seção principal -->
+      <main class="section">
+           <div class="container">
+
+<div class="fixed-grid has-4-cols-desktop has-1-cols-mobile ">
+                <div class="grid">
+    <!-- Card de item 1 -->
+                    <div class="cell mx-2">
+                        <div class="card has-background-black">
+
+                            <div class="card-image">
+                                <figure class="image is-4by3">
+                                    <img src="assets/components/circuito_integrado_ta7614_amplificador_fi_fm.webp" alt="">
+                                </figure>
+                            </div>
+
+                            <div class="card-content">
+                                <p class="title is-size-5">TA7614 <br> amplificador Fm</p>
+                                <p id="itemValor">$10,89 
+                                <span id="itemEstoque">* Unidades</span>
+                                </p>
+                            </div>
+
+                            <div class="card-footer">
+                                <p class="card-footer-item  has-background-info">
+                                    <a href="#" class="has-text-black">Adicionar <br> Carrinho</a>
+                                </p>
+
+                                <p class="card-footer-item  has-background-info">
+                                    <a href="#" class="has-text-black">Remover</a>
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+                
+    <!-- Card de item 2 -->
+                    <div class="cell mx-2">
+                        <div class="card has-background-black">
+
+                            <div class="card-image">
+                                <figure class="image is-4by3">
+                                    <img src="assets/components/ne555.webp" alt="">
+                                </figure>
+                            </div>
+
+                            <div class="card-content">
+                                <p class="title is-size-5"> NE555 <br> CI Temporizador</p>
+                                <p id="itemValor">$5,00
+                                <span id="itemEstoque">* Unidades</span>
+                                </p>
+                            </div>
+
+                            <div class="card-footer">
+                                <p class="card-footer-item  has-background-info">
+                                    <a href="#" class="has-text-black">Adicionar <br> Carrinho</a>
+                                </p>
+
+                                <p class="card-footer-item  has-background-info">
+                                    <a href="#" class="has-text-black">Remover</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+    <!-- Card de item 3 -->
+                    <div class="cell mx-2">
+                        <div class="card has-background-black">
+
+                            <div class="card-image">
+                                <figure class="image is-4by3">
+                                    <img src="assets/components/74hc04_not.webp" alt="">
+                                </figure>
+                            </div>
+
+                            <div class="card-content">
+                                <p class="title is-size-5"> 74HC04 <br> CI Inversor</p>
+                                <p id="itemValor">$6,00
+                                <span id="itemEstoque">* Unidades</span>
+                                </p>
+                            </div>
+
+                            <div class="card-footer">
+                                <p class="card-footer-item  has-background-info">
+                                    <a href="#" class="has-text-black">Adicionar <br> Carrinho</a>
+                                </p>
+
+                                <p class="card-footer-item  has-background-info">
+                                    <a href="#" class="has-text-black">Remover</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+    <!-- Card de item 4 -->
+                    <div class="cell mx-2">
+                        <div class="card has-background-black">
+
+                            <div class="card-image">
+                                <figure class="image is-4by3">
+                                    <img src="assets/components/portaXOR_SD4070BE.webp" alt="">
+                                </figure>
+                            </div>
+
+                            <div class="card-content">
+                                <p class="title is-size-5"> CI SD4070BE <br> Porta XOR  </p>
+                                <p id="itemValor">$12,00
+                                <span id="itemEstoque">* Unidades</span>
+                                </p>
+                            </div>
+
+                            <div class="card-footer">
+                                <p class="card-footer-item  has-background-info">
+                                    <a href="#" class="has-text-black">Adicionar <br> Carrinho</a>
+                                </p>
+
+                                <p class="card-footer-item  has-background-info">
+                                    <a href="#" class="has-text-black">Remover</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+    <!-- Card de item 5 -->
+                    <div class="cell mx-3 mt-3">
+                        <div class="card has-background-black">
+
+                            <div class="card-image">
+                                <figure class="image is-4by3">
+                                    <img src="assets/components/W27C512eeprom.webp" alt="">
+                                </figure>
+                            </div>
+
+                            <div class="card-content">
+                                <p class="title is-size-5"> W27C512 <br> CI EEPROM Memoria</p>
+                                <p id="itemValor">$50,00
+                                <span id="itemEstoque">* Unidades</span>
+                                </p>
+                            </div>
+
+                            <div class="card-footer">
+                                <p class="card-footer-item  has-background-info">
+                                    <a href="#" class="has-text-black">Adicionar <br> Carrinho</a>
+                                </p>
+
+                                <p class="card-footer-item  has-background-info">
+                                    <a href="#" class="has-text-black">Remover</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+    <!-- Card de item 6 -->
+                    <div class="cell mx-3 mt-3">
+                        <div class="card has-background-black">
+
+                            <div class="card-image">
+                                <figure class="image is-4by3">
+                                    <img src="assets/components/PIC18F4550.webp" alt="">
+                                </figure>
+                            </div>
+
+                            <div class="card-content">
+                                <p class="title is-size-5 "> PIC18F4550 Microcontrolador PIC18</p>
+                                <p id="itemValor">$80,00
+                                <span id="itemEstoque">* Unidades</span>
+                                </p>
+                            </div>
+
+                            <div class="card-footer">
+                                <p class="card-footer-item  has-background-info">
+                                    <a href="#" class="has-text-black">Adicionar <br> Carrinho</a>
+                                </p>
+
+                                <p class="card-footer-item  has-background-info">
+                                    <a href="#" class="has-text-black">Remover</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+    <!-- Card de item 7 -->
+                    <div class="cell mx-3 mt-3">
+                        <div class="card has-background-black">
+
+                            <div class="card-image">
+                                <figure class="image is-4by3">
+                                    <img src="assets/components/MAX7219_driver_de_led.jpeg" alt="">
+                                </figure>
+                            </div>
+
+                            <div class="card-content">
+                                <p class="title is-size-5 "> MAX7219 <br> Driver de LED</p>
+                                <p id="itemValor">$27,00
+                                <span id="itemEstoque">* Unidades</span>
+                                </p>
+                            </div>
+
+                            <div class="card-footer">
+                                <p class="card-footer-item  has-background-info">
+                                    <a href="#" class="has-text-black">Adicionar <br> Carrinho</a>
+                                </p>
+
+                                <p class="card-footer-item  has-background-info">
+                                    <a href="#" class="has-text-black">Remover</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+    <!-- Card de item 8 -->
+                    <div class="cell mx-3 mt-3">
+                        <div class="card has-background-black">
+
+                            <div class="card-image">
+                                <figure class="image is-4by3">
+                                    <img src="assets/components/max232.webp" alt="">
+                                </figure>
+                            </div>
+
+                            <div class="card-content">
+                                <p class="title is-size-5 "> MAX232 <br>Conversor de Nível</p>
+                                <p id="itemValor">$12,80
+                                <span id="itemEstoque">* Unidades</span>
+                                </p>
+                            </div>
+
+                            <div class="card-footer">
+                                <p class="card-footer-item  has-background-info">
+                                    <a href="#" class="has-text-black">Adicionar <br> Carrinho</a>
+                                </p>
+
+                                <p class="card-footer-item  has-background-info">
+                                    <a href="#" class="has-text-black">Remover</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+            </div>  
+
+        </div> <!-- grid -->
+
+</div> <!-- container -->
+</main> <!-- seção principal -->
+
+</body>
+</html>

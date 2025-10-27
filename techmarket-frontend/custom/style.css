@@ -1,0 +1,17 @@
+.section {
+    background-color: #dcdcdf;
+}
+
+
+ul li .bc {
+    color: #000;
+}
+
+ul li .bc:hover {
+    color: #464a55;
+}
+
+.card-content #itemEstoque {
+    display:inline;
+    margin-left: 50px;
+}
