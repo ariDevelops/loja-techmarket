@@ -1,9 +1,7 @@
 package com.techmarket.finance_api.controller;
 
 import com.techmarket.finance_api.dto.DadosContaDTO;
-import com.techmarket.finance_api.dto.DadosJurosDTO;
-import com.techmarket.finance_api.dto.NumeroDTO;
-import com.techmarket.finance_api.dto.UsuarioDTO;
+import com.techmarket.finance_api.dto.TransferResponseDTO;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
@@ -11,7 +9,12 @@ import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import jakarta.validation.Valid;
-import java.math.BigDecimal;
+
+// Novos pacotes
+import java.time.LocalDateTime;
+import java.util.UUID;
+import java.util.concurrent.atomic.AtomicLong;
+
 
 @CrossOrigin(origins = "*")
 @RestController
@@ -19,33 +22,24 @@ import java.math.BigDecimal;
 @Validated
 public class FinanceController {
 
-    // //http://localhost:8080/finance-api
-    // @PostMapping
-    // public String efetuarSaldo(@RequestBody UsuarioDTO usuarioDTO) {
-    //     return "Usuario recebido: " + usuarioDTO.getName() + " (" + usuarioDTO.getEmail() + ")";
-    // }
+    private AtomicLong sequence = new AtomicLong(1); // apenas simulando registro
 
-    // //http://localhost:8080/finance-api/calc
-    // @PostMapping("/calc")
-    // public int calcularDobro(@RequestBody NumeroDTO body) {
-    //     return body.getNumero() * 2;
-    // }
-
-    // //http://localhost:8080/finance-api/juros
-    // @PostMapping("/juros")
-    // public BigDecimal calcularJuros(@RequestBody DadosJurosDTO dados) {
-    //     BigDecimal valor = dados.getValor();
-    //     BigDecimal taxa = dados.getTaxa().divide(new BigDecimal("100"));
-    //     BigDecimal meses = new BigDecimal(dados.getMeses());
-
-    //     BigDecimal resultado = valor.multiply(BigDecimal.ONE.add(taxa.multiply(meses)));
-    //     return resultado;
-    // }
 
     //http://localhost:8080/finance-api/transferencia
     @PostMapping("/transferencia")
-    public ResponseEntity<?> receberTransacao(@Valid @RequestBody DadosContaDTO dados) {
-        return ResponseEntity.ok("Transferencia realizada com sucesso!");
-    }
+    public ResponseEntity<TransferResponseDTO> receberTransacao(@Valid @RequestBody DadosContaDTO dados) {
+        // return ResponseEntity.ok("Transferencia realizada com sucesso!");
+        
+                TransferResponseDTO response = new TransferResponseDTO(
+                UUID.randomUUID().toString(),  // código único
+                sequence.getAndIncrement(),    // número incremental
+                LocalDateTime.now()            // timestamp
+                );
 
-}
+        return ResponseEntity.ok(response);
+    } // fim do controller post
+
+} // fim da classe
+
+
+

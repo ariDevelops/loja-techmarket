@@ -21,13 +21,10 @@ public class DadosContaDTO {
     @DecimalMin(value = "0.01", message = "O Valor da transferencia deve ser maior do que zero")
     private BigDecimal valor;
 
-
-    
     public String getContaOrigem() { return contaOrigem; }
     public void setContaOrigem(String contaOrigem) {
       this.contaOrigem = contaOrigem;
     }
-
 
     public String getContaDestino() { return contaDestino; }
     public void setContaDestino(String contaDestino) {
