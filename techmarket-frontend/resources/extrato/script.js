@@ -1,58 +1,48 @@
-const elementoSaldo = document.getElementById('saldo-conta')
-const lista = document.getElementById('lista-transacoes')
+const elementoSaldo = document.getElementById('saldo-conta');
+const lista = document.getElementById('lista-transacoes');
 
-    const extrato = {
-        saldo: 11400.50,
-        transacoes: [
-            {tipo: 'venda', descricao: 'Osciloscopio Eletrotechnix AP400', valor: -6000},
-            {tipo: 'venda', descricao: 'Arduino mega', valor: 289.90},
-            {tipo: 'venda', descricao: 'Conversor Serial', valor: 50},
-            {tipo: 'reembolso', descricao: 'reembolso de cliente', valor: 50},
-            {tipo: 'taxa', descricao: 'Taxa de cambio na conversão USD', valor: 30},
-        ]
-    }
+// Recupera carrinho salvo
+const cart = JSON.parse(localStorage.getItem('cart')) || [];
 
+// Se não tiver itens no carrinho, mostra mensagem
+if (cart.length === 0) {
+    elementoSaldo.textContent = "Nenhuma compra registrada";
+} else {
 
+    // Calcula total gasto (valor negativo no extrato)
+    const totalGasto = cart.reduce((acc, item) => acc + (item.price * item.quantity), 0);
 
-elementoSaldo.textContent = `Saldo: ${extrato.saldo.toLocaleString('pt-BR',{
-    style: 'currency',
-    currency: 'BRL'
+    const saldoInicial = 10000; // saldo inicial fictício
+    const saldoAtual = saldoInicial - totalGasto;
 
-})}`
+    elementoSaldo.textContent = `Saldo: ${saldoAtual.toLocaleString('pt-BR', {
+        style: 'currency',
+        currency: 'BRL'
+    })}`;
 
-extrato.transacoes.forEach( key => {
-    const itemLista = document.createElement('li')
-    itemLista.classList.add('transacao')
+    // Renderiza cada transação = item do carrinho
+    cart.forEach(item => {
+        const li = document.createElement('li');
+        li.classList.add('transacao');
 
-    // Validacoes de valores
-    if (Math.abs(key) >= 5000) {
-       itemLista.classList.add('destaque') 
-    }
+        const valorFormatado = new Intl.NumberFormat('pt-BR', {
+            style: 'currency',
+            currency: 'BRL'
+        }).format(item.price * item.quantity);
 
-    const ValorFormatado = new Intl.NumberFormat('pt-BR', {
-    style: 'currency',
-    currency: 'BRL'
-    }).format(key.valor);
+        // Se valor gasto for > 5000 → destaque
+        if ((item.price * item.quantity) > 5000) {
+            li.classList.add('destaque');
+        }
 
-    // testa a classe de maior que zero
-    let valor;
-    if (key.valor > 0) 
-    {
-       valor = 'negativo' 
-    }
-    else
-    {
-        valor = ''
-    }
+        li.innerHTML = `
+            <div class="transacao-info">
+                <span>Compra → ${item.name}</span>
+                <small>Qtd: ${item.quantity}</small>
+            </div>
+            <span class="transacao-valor negativo">${valorFormatado}</span>
+        `;
 
-    itemLista.innerHTML = `
-    <div class="transacao-info">
-        <span>${key.tipo} ->  ${key.descricao}</span>
-        <small>${key.valor}</small>
-        <span class="transacao-valor ${valor}">
-        ${ValorFormatado}
-    `;
-
-    lista.appendChild(itemLista);
-
-}) // Fim do foreach
+        lista.appendChild(li);
+    });
+}

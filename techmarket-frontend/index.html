@@ -4,10 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css"> -->
-    <link rel="stylesheet" href="node_modules/bulma/css/bulma.min.css">
+    <!-- <link rel="stylesheet" href="node_modules/bulma/css/bulma.min.css"> -->
+     <link rel="stylesheet" href="./style/bulma.min.css">
     <script src="src/index.js" defer></script>
     <script src="src/burger.js" defer></script>
     <link rel="stylesheet" href="custom/style.css">
+
+    <link rel="shortcut icon" href="assets/cpu.png" type="image/x-icon">
+
     <title>loja techmarket</title>
 </head>
 <body>
@@ -19,10 +23,13 @@
                 <img src="assets/bitmap.png" alt="site logo" style="max-height: 70px;">
             </div>
 
-               <a href="" class="navbar-item">
+            <!-- Carrinho de compras -->
+               <a href="resources/extrato/boleto.html" class="navbar-item">
                  <img src="assets/carrinho-de-compras.png" alt="carrinho">
+                 <span id="cart-count" class="tag is-danger is-rounded">0</span>
                </a>
 
+            <!-- Login de usuario -->
                <a href="" class="navbar-item">
                   <img src="assets/login-de-usuario.png" alt="">
                </a>
@@ -86,7 +93,9 @@
 
                             <div class="card-footer">
                                 <p class="card-footer-item  has-background-info">
-                                    <a href="#" class="has-text-black">Adicionar <br> Carrinho</a>
+                                    <a href="#" class="add-to-cart has-text-black" data-name="TA7614 Amplificador" data-price="10.89">
+                                        Adicionar <br> Carrinho
+                                    </a>
                                 </p>
 
                                 <p class="card-footer-item  has-background-info">
@@ -116,7 +125,9 @@
 
                             <div class="card-footer">
                                 <p class="card-footer-item  has-background-info">
-                                    <a href="#" class="has-text-black">Adicionar <br> Carrinho</a>
+                                    <a href="#" class="add-to-cart has-text-black" data-name="NE555 CI Temporizador" data-price="5.00">
+                                        Adicionar <br> Carrinho
+                                    </a>
                                 </p>
 
                                 <p class="card-footer-item  has-background-info">
@@ -145,7 +156,9 @@
 
                             <div class="card-footer">
                                 <p class="card-footer-item  has-background-info">
-                                    <a href="#" class="has-text-black">Adicionar <br> Carrinho</a>
+                                    <a href="#" class="add-to-cart has-text-black" data-name="74HC04 CI Inversor" data-price="6.00">
+                                        Adicionar <br> Carrinho
+                                    </a>
                                 </p>
 
                                 <p class="card-footer-item  has-background-info">
@@ -174,7 +187,7 @@
 
                             <div class="card-footer">
                                 <p class="card-footer-item  has-background-info">
-                                    <a href="#" class="has-text-black">Adicionar <br> Carrinho</a>
+                                    <a href="#" class="add-to-cart has-text-black" data-name="CI SD4070BE Porta XOR" data-price="12.00" >Adicionar <br> Carrinho</a>
                                 </p>
 
                                 <p class="card-footer-item  has-background-info">
@@ -203,7 +216,7 @@
 
                             <div class="card-footer">
                                 <p class="card-footer-item  has-background-info">
-                                    <a href="#" class="has-text-black">Adicionar <br> Carrinho</a>
+                                    <a href="#" class="add-to-cart has-text-black" data-name="W27C512 CI EEPROM Memoria" data-price="50.00" >Adicionar <br> Carrinho</a>
                                 </p>
 
                                 <p class="card-footer-item  has-background-info">
@@ -232,7 +245,7 @@
 
                             <div class="card-footer">
                                 <p class="card-footer-item  has-background-info">
-                                    <a href="#" class="has-text-black">Adicionar <br> Carrinho</a>
+                                    <a href="#" class="add-to-cart has-text-black" data-name="PIC18F4550 Microcontrolador PIC18" data-price="80.00" >Adicionar <br> Carrinho</a>
                                 </p>
 
                                 <p class="card-footer-item  has-background-info">
@@ -260,7 +273,7 @@
 
                             <div class="card-footer">
                                 <p class="card-footer-item  has-background-info">
-                                    <a href="#" class="has-text-black">Adicionar <br> Carrinho</a>
+                                    <a href="#" class="add-to-cart has-text-black" data-name="MAX7219 Driver de LED" data-price="27.00" >Adicionar <br> Carrinho</a>
                                 </p>
 
                                 <p class="card-footer-item  has-background-info">
@@ -289,7 +302,36 @@
 
                             <div class="card-footer">
                                 <p class="card-footer-item  has-background-info">
-                                    <a href="#" class="has-text-black">Adicionar <br> Carrinho</a>
+                                    <a href="#" class="add-to-cart has-text-black" data-name="MAX232" data-price="12.80" >Adicionar <br> Carrinho</a>
+                                </p>
+
+                                <p class="card-footer-item  has-background-info">
+                                    <a href="#" class="has-text-black">Remover</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+    <!-- Card de item 9 -->
+                    <div class="cell mx-3 mt-3">
+                        <div class="card has-background-black">
+
+                            <div class="card-image">
+                                <figure class="image is-4by3">
+                                    <img src="assets/components/osciloscopio.webp" alt="">
+                                </figure>
+                            </div>
+
+                            <div class="card-content">
+                                <p class="title is-size-5 "> osciloscopio <br> techtron 2ghz</p>
+                                <p id="itemValor">$6800,00
+                                <span id="itemEstoque">* Unidades</span>
+                                </p>
+                            </div>
+
+                            <div class="card-footer">
+                                <p class="card-footer-item  has-background-info">
+                                    <a href="#" class="add-to-cart has-text-black" data-name="osciloscopio techtron 2ghz" data-price="6800.00" >Adicionar <br> Carrinho</a>
                                 </p>
 
                                 <p class="card-footer-item  has-background-info">
