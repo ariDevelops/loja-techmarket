@@ -5,10 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css"> -->
     <!-- <link rel="stylesheet" href="node_modules/bulma/css/bulma.min.css"> -->
+
+    <!--Css-->
      <link rel="stylesheet" href="./style/bulma.min.css">
+    <link rel="stylesheet" href="custom/style.css">
+
+    <!-- Scripts JS-->
     <script src="src/index.js" defer></script>
     <script src="src/burger.js" defer></script>
-    <link rel="stylesheet" href="custom/style.css">
+    <script src="src/modal.js" defer></script>
 
     <link rel="shortcut icon" href="assets/cpu.png" type="image/x-icon">
 
@@ -30,7 +35,7 @@
                </a>
 
             <!-- Login de usuario -->
-               <a href="" class="navbar-item">
+               <a href="#" class="navbar-item" id="botaoLoginPage">
                   <img src="assets/login-de-usuario.png" alt="">
                </a>
 
@@ -345,8 +350,76 @@
 
         </div> <!-- grid -->
 
-</div> <!-- container -->
-</main> <!-- seção principal -->
 
+<!-- Modal login page-->
+    <div class="modal">
+        <div class="modal-background"></div>
+        <div class="modal-content has-background-white-bis">
+           <!-- <h3 class="title mb-6"> Login Page</h3> -->
+<section class="section">
+    <main class="container">
+
+            <div class="title" class="">
+            <a href="#" id="closeLogin" class="">
+                <img width="64" height="64" src="assets/close-window.png" alt="close">
+            </a>
+            </div>
+
+
+
+            <form action="" >
+                <!-- Name field -->
+                <div class="field">
+                    <label class="label has-text-black">Nome</label>
+                    <div class="control">
+                        <input type="text" class="input" placeholder="name">
+                    </div>
+                </div>
+
+                <!-- Email field -->
+                <div class="field">
+                    <label class="label has-text-black">Email</label>
+                    <div class="control">
+                        <input type="email" class="input" placeholder="email">
+                    </div>
+                </div>
+
+                <!-- Senha field -->
+                <div class="field">
+                    <label class="label has-text-black">Senha</label>
+                    <div class="control">
+                        <input type="password" class="input" placeholder="password">
+                    </div>
+                </div>
+
+
+            <!-- checkbox -->
+                <div class="field">
+                    <div class="control">
+                        <label for="" class="checkbox">
+                            <input type="checkbox">
+                            Eu concordo com os <a href="#" class="has-text-warning">Termos e condições</a>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- submit button -->
+                <div class="field has-text-centered mt-6">
+                    <div class="control">
+                        <button type="submit" class="button is-primary">Submit</button>
+                    </div>
+                </div>
+
+            </form>
+    </main>
+</section>
+        </div>
+    </div> <!-- Fim da modal -->
+
+
+</div> <!-- container -->
+
+
+</main> <!-- seção principal -->
 </body>
 </html>
