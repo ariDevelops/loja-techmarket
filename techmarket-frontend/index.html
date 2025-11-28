@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,18 +8,20 @@
     <!-- <link rel="stylesheet" href="node_modules/bulma/css/bulma.min.css"> -->
 
     <!--Css-->
-     <link rel="stylesheet" href="./style/bulma.min.css">
+    <link rel="stylesheet" href="./style/bulma.min.css">
     <link rel="stylesheet" href="custom/style.css">
 
     <!-- Scripts JS-->
     <script src="src/index.js" defer></script>
     <script src="src/burger.js" defer></script>
     <script src="src/modal.js" defer></script>
+    <script src="src/validacaoModal.js" defer></script>
 
     <link rel="shortcut icon" href="assets/cpu.png" type="image/x-icon">
 
     <title>loja techmarket</title>
 </head>
+
 <body>
 
     <!-- Barra de navegação     -->
@@ -29,38 +32,38 @@
             </div>
 
             <!-- Carrinho de compras -->
-               <a href="resources/extrato/boleto.html" class="navbar-item">
-                 <img src="assets/carrinho-de-compras.png" alt="carrinho">
-                 <span id="cart-count" class="tag is-danger is-rounded">0</span>
-               </a>
+            <a href="resources/extrato/boleto.html" class="navbar-item">
+                <img src="assets/carrinho-de-compras.png" alt="carrinho">
+                <span id="cart-count" class="tag is-danger is-rounded">0</span>
+            </a>
 
             <!-- Login de usuario -->
-               <a href="#" class="navbar-item" id="botaoLoginPage">
-                  <img src="assets/login-de-usuario.png" alt="">
-               </a>
+            <a href="#" class="navbar-item" id="botaoLoginPage">
+                <img src="assets/login-de-usuario.png" alt="">
+            </a>
 
-        <a href=""  id="hamburguer" class="navbar-burger">
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-        </a>
+            <a href="" id="hamburguer" class="navbar-burger">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </a>
 
         </div>
 
         <div class="navbar-menu" id="menu">
-           <div class="navbar-start">
-              <a href="" class="navbar-item has-text-black">Categorias</a>
-              <a href="" class="navbar-item has-text-black">Contato</a>
-              <a href="" class="navbar-item has-text-black">Cursos</a>
-           </div>
+            <div class="navbar-start">
+                <a href="" class="navbar-item has-text-black">Categorias</a>
+                <a href="" class="navbar-item has-text-black">Contato</a>
+                <a href="" class="navbar-item has-text-black">Cursos</a>
+            </div>
 
         </div>
     </nav>
 
     <!-- breadcrumbs -->
-   <div class="section pt-4 pb-0">
-    <h1 class="is-size-6 mb-3 has-text-black">Componentes da seção</h1>
+    <div class="section pt-4 pb-0">
+        <h1 class="is-size-6 mb-3 has-text-black">Componentes da seção</h1>
 
         <nav class="breadcrumb is-size-7-mobile">
             <ul>
@@ -72,33 +75,35 @@
             </ul>
         </nav>
     </div>
-    
-     <!-- seção principal -->
-      <main class="section">
-           <div class="container">
 
-<div class="fixed-grid has-4-cols-desktop has-1-cols-mobile ">
+    <!-- seção principal -->
+    <main class="section">
+        <div class="container">
+            <!-- Cards -->
+            <div class="fixed-grid has-4-cols-desktop has-1-cols-mobile ">
                 <div class="grid">
-    <!-- Card de item 1 -->
+                    <!-- Card de item 1 -->
                     <div class="cell mx-2">
                         <div class="card has-background-black">
 
                             <div class="card-image">
                                 <figure class="image is-4by3">
-                                    <img src="assets/components/circuito_integrado_ta7614_amplificador_fi_fm.webp" alt="">
+                                    <img src="assets/components/circuito_integrado_ta7614_amplificador_fi_fm.webp"
+                                        alt="">
                                 </figure>
                             </div>
 
                             <div class="card-content">
                                 <p class="title is-size-5">TA7614 <br> amplificador Fm</p>
-                                <p id="itemValor">$10,89 
-                                <span id="itemEstoque">* Unidades</span>
+                                <p id="itemValor">$10,89
+                                    <span id="itemEstoque">* Unidades</span>
                                 </p>
                             </div>
 
                             <div class="card-footer">
                                 <p class="card-footer-item  has-background-info">
-                                    <a href="#" class="add-to-cart has-text-black" data-name="TA7614 Amplificador" data-price="10.89">
+                                    <a href="#" class="add-to-cart has-text-black" data-name="TA7614 Amplificador"
+                                        data-price="10.89">
                                         Adicionar <br> Carrinho
                                     </a>
                                 </p>
@@ -110,8 +115,8 @@
 
                         </div>
                     </div>
-                
-    <!-- Card de item 2 -->
+
+                    <!-- Card de item 2 -->
                     <div class="cell mx-2">
                         <div class="card has-background-black">
 
@@ -124,13 +129,14 @@
                             <div class="card-content">
                                 <p class="title is-size-5"> NE555 <br> CI Temporizador</p>
                                 <p id="itemValor">$5,00
-                                <span id="itemEstoque">* Unidades</span>
+                                    <span id="itemEstoque">* Unidades</span>
                                 </p>
                             </div>
 
                             <div class="card-footer">
                                 <p class="card-footer-item  has-background-info">
-                                    <a href="#" class="add-to-cart has-text-black" data-name="NE555 CI Temporizador" data-price="5.00">
+                                    <a href="#" class="add-to-cart has-text-black" data-name="NE555 CI Temporizador"
+                                        data-price="5.00">
                                         Adicionar <br> Carrinho
                                     </a>
                                 </p>
@@ -142,7 +148,7 @@
                         </div>
                     </div>
 
-    <!-- Card de item 3 -->
+                    <!-- Card de item 3 -->
                     <div class="cell mx-2">
                         <div class="card has-background-black">
 
@@ -155,13 +161,14 @@
                             <div class="card-content">
                                 <p class="title is-size-5"> 74HC04 <br> CI Inversor</p>
                                 <p id="itemValor">$6,00
-                                <span id="itemEstoque">* Unidades</span>
+                                    <span id="itemEstoque">* Unidades</span>
                                 </p>
                             </div>
 
                             <div class="card-footer">
                                 <p class="card-footer-item  has-background-info">
-                                    <a href="#" class="add-to-cart has-text-black" data-name="74HC04 CI Inversor" data-price="6.00">
+                                    <a href="#" class="add-to-cart has-text-black" data-name="74HC04 CI Inversor"
+                                        data-price="6.00">
                                         Adicionar <br> Carrinho
                                     </a>
                                 </p>
@@ -173,7 +180,7 @@
                         </div>
                     </div>
 
-    <!-- Card de item 4 -->
+                    <!-- Card de item 4 -->
                     <div class="cell mx-2">
                         <div class="card has-background-black">
 
@@ -184,15 +191,16 @@
                             </div>
 
                             <div class="card-content">
-                                <p class="title is-size-5"> CI SD4070BE <br> Porta XOR  </p>
+                                <p class="title is-size-5"> CI SD4070BE <br> Porta XOR </p>
                                 <p id="itemValor">$12,00
-                                <span id="itemEstoque">* Unidades</span>
+                                    <span id="itemEstoque">* Unidades</span>
                                 </p>
                             </div>
 
                             <div class="card-footer">
                                 <p class="card-footer-item  has-background-info">
-                                    <a href="#" class="add-to-cart has-text-black" data-name="CI SD4070BE Porta XOR" data-price="12.00" >Adicionar <br> Carrinho</a>
+                                    <a href="#" class="add-to-cart has-text-black" data-name="CI SD4070BE Porta XOR"
+                                        data-price="12.00">Adicionar <br> Carrinho</a>
                                 </p>
 
                                 <p class="card-footer-item  has-background-info">
@@ -202,7 +210,7 @@
                         </div>
                     </div>
 
-    <!-- Card de item 5 -->
+                    <!-- Card de item 5 -->
                     <div class="cell mx-3 mt-3">
                         <div class="card has-background-black">
 
@@ -215,13 +223,14 @@
                             <div class="card-content">
                                 <p class="title is-size-5"> W27C512 <br> CI EEPROM Memoria</p>
                                 <p id="itemValor">$50,00
-                                <span id="itemEstoque">* Unidades</span>
+                                    <span id="itemEstoque">* Unidades</span>
                                 </p>
                             </div>
 
                             <div class="card-footer">
                                 <p class="card-footer-item  has-background-info">
-                                    <a href="#" class="add-to-cart has-text-black" data-name="W27C512 CI EEPROM Memoria" data-price="50.00" >Adicionar <br> Carrinho</a>
+                                    <a href="#" class="add-to-cart has-text-black" data-name="W27C512 CI EEPROM Memoria"
+                                        data-price="50.00">Adicionar <br> Carrinho</a>
                                 </p>
 
                                 <p class="card-footer-item  has-background-info">
@@ -231,7 +240,7 @@
                         </div>
                     </div>
 
-    <!-- Card de item 6 -->
+                    <!-- Card de item 6 -->
                     <div class="cell mx-3 mt-3">
                         <div class="card has-background-black">
 
@@ -244,13 +253,15 @@
                             <div class="card-content">
                                 <p class="title is-size-5 "> PIC18F4550 Microcontrolador PIC18</p>
                                 <p id="itemValor">$80,00
-                                <span id="itemEstoque">* Unidades</span>
+                                    <span id="itemEstoque">* Unidades</span>
                                 </p>
                             </div>
 
                             <div class="card-footer">
                                 <p class="card-footer-item  has-background-info">
-                                    <a href="#" class="add-to-cart has-text-black" data-name="PIC18F4550 Microcontrolador PIC18" data-price="80.00" >Adicionar <br> Carrinho</a>
+                                    <a href="#" class="add-to-cart has-text-black"
+                                        data-name="PIC18F4550 Microcontrolador PIC18" data-price="80.00">Adicionar <br>
+                                        Carrinho</a>
                                 </p>
 
                                 <p class="card-footer-item  has-background-info">
@@ -259,7 +270,7 @@
                             </div>
                         </div>
                     </div>
-    <!-- Card de item 7 -->
+                    <!-- Card de item 7 -->
                     <div class="cell mx-3 mt-3">
                         <div class="card has-background-black">
 
@@ -272,13 +283,14 @@
                             <div class="card-content">
                                 <p class="title is-size-5 "> MAX7219 <br> Driver de LED</p>
                                 <p id="itemValor">$27,00
-                                <span id="itemEstoque">* Unidades</span>
+                                    <span id="itemEstoque">* Unidades</span>
                                 </p>
                             </div>
 
                             <div class="card-footer">
                                 <p class="card-footer-item  has-background-info">
-                                    <a href="#" class="add-to-cart has-text-black" data-name="MAX7219 Driver de LED" data-price="27.00" >Adicionar <br> Carrinho</a>
+                                    <a href="#" class="add-to-cart has-text-black" data-name="MAX7219 Driver de LED"
+                                        data-price="27.00">Adicionar <br> Carrinho</a>
                                 </p>
 
                                 <p class="card-footer-item  has-background-info">
@@ -288,7 +300,7 @@
                         </div>
                     </div>
 
-    <!-- Card de item 8 -->
+                    <!-- Card de item 8 -->
                     <div class="cell mx-3 mt-3">
                         <div class="card has-background-black">
 
@@ -301,13 +313,14 @@
                             <div class="card-content">
                                 <p class="title is-size-5 "> MAX232 <br>Conversor de Nível</p>
                                 <p id="itemValor">$12,80
-                                <span id="itemEstoque">* Unidades</span>
+                                    <span id="itemEstoque">* Unidades</span>
                                 </p>
                             </div>
 
                             <div class="card-footer">
                                 <p class="card-footer-item  has-background-info">
-                                    <a href="#" class="add-to-cart has-text-black" data-name="MAX232" data-price="12.80" >Adicionar <br> Carrinho</a>
+                                    <a href="#" class="add-to-cart has-text-black" data-name="MAX232"
+                                        data-price="12.80">Adicionar <br> Carrinho</a>
                                 </p>
 
                                 <p class="card-footer-item  has-background-info">
@@ -317,7 +330,7 @@
                         </div>
                     </div>
 
-    <!-- Card de item 9 -->
+                    <!-- Card de item 9 -->
                     <div class="cell mx-3 mt-3">
                         <div class="card has-background-black">
 
@@ -330,13 +343,15 @@
                             <div class="card-content">
                                 <p class="title is-size-5 "> osciloscopio <br> techtron 2ghz</p>
                                 <p id="itemValor">$6800,00
-                                <span id="itemEstoque">* Unidades</span>
+                                    <span id="itemEstoque">* Unidades</span>
                                 </p>
                             </div>
 
                             <div class="card-footer">
                                 <p class="card-footer-item  has-background-info">
-                                    <a href="#" class="add-to-cart has-text-black" data-name="osciloscopio techtron 2ghz" data-price="6800.00" >Adicionar <br> Carrinho</a>
+                                    <a href="#" class="add-to-cart has-text-black"
+                                        data-name="osciloscopio techtron 2ghz" data-price="6800.00">Adicionar <br>
+                                        Carrinho</a>
                                 </p>
 
                                 <p class="card-footer-item  has-background-info">
@@ -346,80 +361,112 @@
                         </div>
                     </div>
 
-            </div>  
-
-        </div> <!-- grid -->
-
-
-<!-- Modal login page-->
-    <div class="modal">
-        <div class="modal-background"></div>
-        <div class="modal-content has-background-white-bis">
-           <!-- <h3 class="title mb-6"> Login Page</h3> -->
-<section class="section">
-    <main class="container">
-
-            <div class="title" class="">
-            <a href="#" id="closeLogin" class="">
-                <img width="64" height="64" src="assets/close-window.png" alt="close">
-            </a>
-            </div>
-
-
-
-            <form action="" >
-                <!-- Name field -->
-                <div class="field">
-                    <label class="label has-text-black">Nome</label>
-                    <div class="control">
-                        <input type="text" class="input" placeholder="name">
-                    </div>
                 </div>
 
-                <!-- Email field -->
-                <div class="field">
-                    <label class="label has-text-black">Email</label>
-                    <div class="control">
-                        <input type="email" class="input" placeholder="email">
-                    </div>
+            </div> <!-- grid -->
+
+
+            <!-- Modal login page-->
+            <div class="modal">
+                <div class="modal-background"></div>
+                <div class="modal-content has-background-white-bis">
+                    <!-- <h3 class="title mb-6"> Login Page</h3> -->
+                    <section class="section">
+                        <main class="container">
+
+                            <div class="title" class="">
+                                <a href="#" id="closeLogin" class="">
+                                    <img width="64" height="64" src="assets/close-window.png" alt="close">
+                                </a>
+                            </div>
+
+
+
+                            <form action="" id="meuFormulario">
+                                <!-- Name field -->
+                                <div class="field">
+                                    <label class="label has-text-black">Nome</label>
+                                    <div class="control">
+                                        <input type="text" class="input" id="nome" placeholder="name">
+                                    </div>
+                                </div>
+
+                                <!-- CPF -->
+                                <div class="field">
+                                    <label class="label has-text-black">CPF</label>
+                                    <div class="control">
+                                        <input type="text" class="input" id="cpf" placeholder="Apenas números"
+                                            maxlength="11" required>
+                                    </div>
+                                    <p class="help is-danger" id="cpfErro"></p>
+                                </div>
+
+                                <!-- Data de nascimento -->
+                                <div class="field">
+                                    <label class="label has-text-black">Data de Nascimento</label>
+                                    <div class="control">
+                                        <input type="date" class="input" id="dataNascimento" required>
+                                    </div>
+                                    <p class="help is-danger" id="dataErro"></p>
+                                </div>
+
+                                <!-- Telefone -->
+                                <div class="field">
+                                    <label class="label has-text-black">Telefone</label>
+                                    <div class="control">
+                                        <input type="tel" class="input" id="telefone" placeholder="(DDD) 99999-9999"
+                                            required>
+                                    </div>
+                                    <p class="help is-danger" id="telefoneErro"></p>
+                                </div>
+
+                                <!-- Email field -->
+                                <div class="field">
+                                    <label class="label has-text-black">Email</label>
+                                    <div class="control">
+                                        <input type="email" class="input" id="email" placeholder="email">
+                                    </div>
+                                </div>
+
+                                <!-- Senha field -->
+                                <div class="field">
+                                    <label class="label has-text-black">Senha</label>
+                                    <div class="control">
+                                        <input type="password" class="input" id="senha" placeholder="password">
+                                    </div>
+                                </div>
+
+
+                                <!-- checkbox -->
+                                <div class="field">
+                                    <div class="control">
+                                        <label for="" class="checkbox">
+                                            <input id="termos" type="checkbox">
+                                            Eu concordo com os <a href="#" class="has-text-warning">Termos e
+                                                condições</a>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <!-- submit button -->
+                                <div class="field has-text-centered mt-6">
+                                    <div class="control">
+                                        <button type="submit" class="button is-primary">Submit</button>
+                                    </div>
+                                </div>
+
+
+                            </form>
+                        </main>
+                    </section>
                 </div>
-
-                <!-- Senha field -->
-                <div class="field">
-                    <label class="label has-text-black">Senha</label>
-                    <div class="control">
-                        <input type="password" class="input" placeholder="password">
-                    </div>
-                </div>
+            </div> <!-- Fim da modal -->
 
 
-            <!-- checkbox -->
-                <div class="field">
-                    <div class="control">
-                        <label for="" class="checkbox">
-                            <input type="checkbox">
-                            Eu concordo com os <a href="#" class="has-text-warning">Termos e condições</a>
-                        </label>
-                    </div>
-                </div>
-
-                <!-- submit button -->
-                <div class="field has-text-centered mt-6">
-                    <div class="control">
-                        <button type="submit" class="button is-primary">Submit</button>
-                    </div>
-                </div>
-
-            </form>
-    </main>
-</section>
-        </div>
-    </div> <!-- Fim da modal -->
+        </div> <!-- container -->
 
 
-</div> <!-- container -->
-
-
-</main> <!-- seção principal -->
+    </main> <!-- seção principal -->
 </body>
+
 </html>
