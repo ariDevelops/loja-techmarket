@@ -1,6 +1,6 @@
 	DROP DATABASE IF EXISTS LojaTM;
 	CREATE DATABASE LojaTM;
-
+    
 use LojaTM;
 
 DROP TABLE IF EXISTS Contas;
@@ -16,24 +16,23 @@ CREATE TABLE Transacoes ( id_transacao INT AUTO_INCREMENT PRIMARY KEY,
                           foreign key (id_conta) references Contas(id_conta),
                           INDEX idx_conta_data(id_conta, data_transacao));
                           
-
 insert into Contas(nome_conta) values ("Natalia Silva"), 
 									  ("Ariel Vieira");
 
 									
 INSERT INTO Transacoes (id_conta, tipo, valor, data_transacao) VALUES
-(1, 'CREDITO', 500.00, '2025-10-01 10:00:00'),
-(1, 'DEBITO', 200.00, '2025-10-05 15:00:00'),
-(1, 'CREDITO', 300.00, '2025-10-10 09:30:00'),
-(1, 'DEBITO', 100.00, '2025-10-15 14:45:00'),
-(1, 'CREDITO', 700.00, '2025-10-20 08:00:00'),
-(2, 'CREDITO', 1000.00, '2025-10-02 12:00:00'),
-(2, 'DEBITO', 500.00, '2025-10-07 16:30:00'),
-(2, 'CREDITO', 200.00, '2025-10-12 11:00:00');
-                     
-DELIMITER //
+(1, 'CREDITO', 500.00, '2025-11-01 10:00:00'),
+(1, 'DEBITO', 200.00, '2025-11-05 15:00:00'),
+(1, 'CREDITO', 300.00, '2025-11-10 09:30:00'),
+(1, 'DEBITO', 100.00, '2025-11-15 14:45:00'),
+(1, 'CREDITO', 700.00, '2025-11-20 08:00:00'),
+(2, 'CREDITO', 1000.00, '2025-11-02 12:00:00'),
+(2, 'DEBITO', 500.00, '2025-11-07 16:30:00'),
+(2, 'CREDITO', 200.00, '2025-11-12 11:00:00');
 
-DROP procedure if exists EP_ExtratoConta;
+
+DELIMITER $$
+DROP procedure if exists EP_ExtratoConta$$
 CREATE procedure EP_ExtratoConta(
 in p_id_conta INT,
 in p_data_inicio DATE
@@ -42,28 +41,34 @@ BEGIN
 	DECLARE saldo_atual DECIMAL(15,2);
 
 
--- Logica de credito
 
-select sum( case
+select SUM( 
+		case
 			when tipo = 'CREDITO' then valor
 			else -valor
-			end)
+		end
+)
 INTO saldo_atual
-FROM Transacoes where id_conta=P_id_conta;
+FROM Transacoes 
+where id_conta = p_id_conta;
 
 	
-select p_id_conta as 'ID_CONTA',
-       saldo_atual as 'SALDO_ATUAL';
+select p_id_conta as 'ID_Conta',
+       saldo_atual as 'Saldo_Atual';
     
-select id_transacao as 'ID_TRANSACAO',
-	   tipo as 'TIPO_TRANSACAO',
-       valor as 'VALOR_TRANSACAO',
-	   data_transacao as 'DATA_TRANSACAO'
+select
+	   id_transacao as 'ID_transacao',
+	   tipo as 'Tipo_Transacao',
+       valor as 'Valor_Transacao',
+	   data_transacao as 'Data_Transacao'
 FROM Transacoes 
 where id_conta = p_id_conta
 	and data_transacao >= p_data_inicio
 	order by data_transacao desc
-    limit 10; -- define o limite de 10 ultimas transacoes
+    limit 10; 
 
-END //
+END$$
+
 DELIMITER ;
+
+CALL EP_ExtratoConta(1, DATE_SUB(CURDATE(), INTERVAL 30 DAY));
